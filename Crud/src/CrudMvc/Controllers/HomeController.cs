@@ -1,21 +1,24 @@
 using System.Diagnostics;
+using CrudMvc.Context;
 using Microsoft.AspNetCore.Mvc;
 using CrudMvc.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrudMvc.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly AppDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(AppDbContext context)
     {
-        _logger = logger;
+        _context = context;
     }
+    
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        return View(await _context.contatos.ToListAsync());
     }
 
     public IActionResult Privacy()
