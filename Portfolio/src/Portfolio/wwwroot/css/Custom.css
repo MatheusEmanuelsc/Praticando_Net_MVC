@@ -1,6 +1,24 @@
-#foto{
-    width: 200px;
-    margin: 2rem auto;
-    border-radius: 50%;
-    border: 1px solid black;
+
+
+.capa{
+    background-color: #D3D3D3;
+   
+    
+}
+
+.principal-text{
+    background-color:  #A9A9A9;
+    padding: 2rem ;
+    border-radius: 1rem;
+    
+}
+
+.principal-text p{
+    margin-top: 1rem;
+}
+.cabecera{
+    font-weight: bold;
+}
+ul{
+    list-style: none;
 }
